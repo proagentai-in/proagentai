@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { scrollToSection } from "@/lib/utils";
+import logo from "../../assets/logo.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -31,11 +32,18 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a
           href="#"
-          className="text-xl font-bold tracking-tight"
+          className="flex items-center"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
-          <span className="text-gradient-primary">Proagent</span>
-          <span className="text-white">AI</span>
+          <span className="text-xl font-bold tracking-tight text-gradient-primary relative z-10">
+            Proagent
+          </span>
+          <img
+            src={logo}
+            alt="AI Logo"
+            className="h-10 w-auto -ml-5 mt-1"
+            style={{ mixBlendMode: "lighten", filter: "brightness(1.2)" }}
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
